@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="estilos.css">
+  <script src="script.js" type="module" defer></script>
+  <title>Modelo parcial</title>
+</head>
+<body>
+    <nav id="nav">
+        <div class="navbar-logo-container">
+            <img src="./imagenes/navbar.png" alt="navbar" class="navbar-logo">
+        </div>
+        <ul class="navbar-menu">
+            <li><a href="#" onclick="seleccionar()">Home</a></li>
+            <li><a href="#" onclick="seleccionar()">Personajes</a></li>
+            <li><a href="#" onclick="seleccionar()">Blog</a></li>
+            <li><a href="#" onclick="seleccionar()">Contacto</a></li>
+        </ul>
+    </nav>
+  <div class="container">
+    <h1>Crud Heroes</h1>
+
+    <div class="contenedorFormulario">
+      <h2>Información del superHeroe</h2>
+      <form id="formulario">
+
+        <label for="txt-nombre">Nombre</label>
+        <input type="text" id="txt-nombre" name="nombre" placeholder="Ingrese nombre">
+
+        <label for="txt-alias">Alias</label>
+        <input type="text" id="txt-alias" placeholder="Ingrese Alias">
+
+        <fieldset id="FieldTransaccion">
+          <legend id="legendaTrans" >Editorial</legend>
+          <label>Marvel</label>
+          <input type="radio" name="txt-editorial" value="Marvel" id="MarvelID">
+          <label>DC</label>
+          <input type="radio" name="txt-editorial" value="DC" id="DCID">
+      </fieldset>
+
+      <label for="txt-fuerza">Fuerza</label>
+      <input type="range" id="txt-fuerza">
+
+      <label for="txt-arma">Armas</label>
+      <select id ="txt-arma">
+      </select>
+        <div class="botones">
+          <button type="submit" id="btn-agregar">Agregar</button>
+          <button type="submit" id="btn-modificar">Modificar superheroe</button>
+          <button type="submit" id="btn-cancelar">Cancelar</button>
+          <button type="submit" id="btn-eliminar">Eliminar SuperHeroe</button>
+        </div>
+      </form>
+    </div>
+    <div id="spinner"></div>
+    <section id="TABLA"></section>
+</body>
+</html>
